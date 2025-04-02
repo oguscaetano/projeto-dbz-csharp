@@ -36,5 +36,17 @@ namespace Xablau.Controllers
 
             return Ok(personagens);
         }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Personagem>> GetPersonagem(int id)
+        {
+            var personagem = await _appDbContext.XablauDB.FindAsync(id);
+
+            if (personagem == null) {
+                return NotFound("Personagem não encontrado!");
+            }
+
+            return Ok(personagem);
+        }
     }
 }
