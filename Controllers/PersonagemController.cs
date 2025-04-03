@@ -48,5 +48,21 @@ namespace Xablau.Controllers
 
             return Ok(personagem);
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdatePersonagem(int id, [FromBody] Personagem personagemAtualizado)
+        {
+            var personagemExistente = await _appDbContext.XablauDB.FindAsync(id);
+
+            if (personagemExistente == null) {
+                return NotFound("Personagem não encontrado!");
+            }
+
+            _appDbContext.Entry(personagemExistente).CurrentValues.SetValues(personagemAtualizado);
+
+            await _appDbContext.SaveChangesAsync();
+
+            return StatusCode(201, personagemAtualizado);
+        }
     }
 }
