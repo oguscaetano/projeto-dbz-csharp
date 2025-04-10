@@ -17,16 +17,16 @@ namespace Xablau.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddPersonagem(Personagem personagem)
+        public async Task<IActionResult> AddPersonagem([FromBody] Personagem personagem)
         {
-            if (personagem == null) {
-                return BadRequest("Dados inválidos!");
+            if (!ModelState.IsValid) {
+                return BadRequest(ModelState);
             }
 
             _appDbContext.XablauDB.Add(personagem);
             await _appDbContext.SaveChangesAsync();
 
-            return StatusCode(201, personagem);
+            return Created("Personagem criado com sucesso!", personagem);
         }
 
         [HttpGet]
