@@ -4,7 +4,7 @@ const inputCep = document.getElementById('cep');
 
 const fetchAPI = async (endpoint) => {
     try {
-        const response = await fetch(endpoint, );
+        const response = await fetch(endpoint);
         const data = await response.json();
         console.log(data); // Aqui você vê os dados de verdade
 

@@ -83,3 +83,7 @@ C:\Users\gus\UP\projeto-dbz-csharp\obj\Debug\net8.0\refint\Xablau.dll
 C:\Users\gus\UP\projeto-dbz-csharp\obj\Debug\net8.0\Xablau.pdb
 C:\Users\gus\UP\projeto-dbz-csharp\obj\Debug\net8.0\Xablau.genruntimeconfig.cache
 C:\Users\gus\UP\projeto-dbz-csharp\obj\Debug\net8.0\ref\Xablau.dll
+C:\Users\gus\UP\projeto-dbz-csharp\bin\Debug\net8.0\pokedex-next\package-lock.json
+C:\Users\gus\UP\projeto-dbz-csharp\bin\Debug\net8.0\pokedex-next\package.json
+C:\Users\gus\UP\projeto-dbz-csharp\bin\Debug\net8.0\pokedex-next\tsconfig.json
+C:\Users\gus\UP\projeto-dbz-csharp\bin\Debug\net8.0\package-lock.json
